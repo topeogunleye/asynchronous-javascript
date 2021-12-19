@@ -24,7 +24,7 @@ getTodosPromise('todos/luigi.json')
     return getTodosPromise('todos/mario.json')
   }).then((data) => {
     console.log('Promise 2 resolved', data);
-    return getTodosPromise('todos/shawnd.json')
+    return getTodosPromise('todos/shawns.json')
   }).then((data) => {
     console.log('Promise 3 resolved', data);
   }).catch((err) => {
