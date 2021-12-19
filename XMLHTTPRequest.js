@@ -2,6 +2,9 @@ const getTodos = (resource, callback) => {
   const request = new XMLHttpRequest();
 
   request.addEventListener('readystatechange', () => {
+    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+    // Response is ready and status is OK
     if (request.readyState === 4 && request.status === 200) {
       const data = JSON.parse(request.responseText);
       callback(undefined, data);
