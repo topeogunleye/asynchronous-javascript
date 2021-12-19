@@ -9,14 +9,21 @@ const getTodos = (callback) => {
     }
   });
 
-  request.open('GET', 'https://jsonplaceholder.typicode.com/todose');
+  request.open('GET', 'https://jsonplaceholder.typicode.com/todos');
   request.send();
 };
 
+console.log(1);
+console.log(2);
+
 getTodos((err, data) => {
+  console.log('callback fired');
   if (err) {
     console.log(err);
   }  else {
     console.log(data);
   }
 });
+
+console.log(3);
+console.log(4);
